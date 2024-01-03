@@ -1,4 +1,5 @@
 # demo-crud-android
+### [English](https://github.com/tarosbubbletea/demo-crud-android/README.en.md) / Español
 Proyecto académico demostrando CRUD en Android, implementando la API REST desarrollada en mi [otro proyecto](https://github.com/tarosbubbletea/demo-rest-hono).
 
 ```
