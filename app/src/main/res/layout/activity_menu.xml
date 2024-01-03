@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity" >
+
+    <LinearLayout
+        android:id="@+id/box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="#282828">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/baseline_search_24"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:endIconMode="clear_text"
+            app:endIconDrawable="@drawable/baseline_close_24"
+            android:layout_height="wrap_content"
+            android:hint="Buscar..."
+            app:endIconTint="@color/white"
+            app:hintAnimationEnabled="false"
+            android:textColorHint="#a2a2a2"
+
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"
+                android:imeOptions="actionSend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:height="60sp"
+                android:layout_gravity="center_vertical"
+                android:padding="16dp"
+
+                android:textColorHint="#a2a2a2"
+
+                android:background="#00000000"
+                android:textColor="#fbfbfb"
+
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <Button-->
+<!--            android:id="@+id/btnLimpiar"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_weight="0"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:background="@drawable/baseline_close_24"-->
+<!--            android:onClick="LimpiarTexto"-->
+<!--            android:scaleType="centerInside" />-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/boxE"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:layout_marginStart="14dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:text="Editar"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangulo"/>
+
+        <Button
+            android:id="@+id/boxA"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rectangulo"
+            android:scaleType="centerInside"
+            android:text="Agregar"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/boxD"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:layout_marginStart="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:text="Borrar"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangulo"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/boxS"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_weight="0"
+            android:layout_marginEnd="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/baseline_refresh_24"
+            app:tint="@color/white"
+            android:background="@drawable/rectangulo"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/FrameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

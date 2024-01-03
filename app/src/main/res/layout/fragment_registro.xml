@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/imagen_2"
+    android:scaleType="fitStart"
+    android:fitsSystemWindows="true"
+    tools:context=".RegistroFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="26dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="22dp" />
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:background="@drawable/arrow"
+        app:layout_constraintStart_toEndOf="@id/guidelineL"
+        app:layout_constraintTop_toTopOf="@id/guidelineT" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineL"
+        app:layout_constraintTop_toBottomOf="@id/guidelineT"
+        app:layout_constraintBottom_toBottomOf="parent">
+    <LinearLayout
+        android:id="@+id/LayoutLayout"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewRut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/orbi"
+                android:text="Rut"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/editTextRut"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/texto"
+                android:ems="10"
+                android:inputType="text"
+                android:paddingStart="14dp"
+                android:textColorHint="#a2a2a2"
+                android:hint="Ingrese dato..."
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/orbi"
+                android:text="Nombre"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/texto"
+                android:ems="10"
+                android:inputType="text"
+                android:textColorHint="#a2a2a2"
+                android:hint="Ingrese dato..."
+                android:paddingStart="14dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textViewCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/orbi"
+                android:text="Correo Electrónico"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/texto"
+                android:ems="10"
+                android:textColorHint="#a2a2a2"
+                android:hint="Ingrese dato..."
+                android:fontFamily="sans-serif"
+                android:inputType="textEmailAddress"
+                android:paddingStart="14dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/orbi"
+                android:text="Contraseña"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp" />
+
+            <EditText
+                android:id="@+id/editTextClave"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/texto"
+                android:ems="10"
+                android:textColorHint="#a2a2a2"
+                android:hint="Ingrese dato..."
+                android:inputType="textPassword"
+                android:paddingStart="14dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rectangulo"
+            android:padding="4sp"
+            android:paddingStart="15sp"
+            android:paddingEnd="15sp"
+            android:text="Siguiente"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/guidelineR"
+            app:layout_constraintStart_toEndOf="@id/guidelineL"
+            app:layout_constraintTop_toBottomOf="@id/LayoutLayout" />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
